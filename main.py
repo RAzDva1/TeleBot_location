@@ -15,9 +15,9 @@ TEXT_HELP = "I have several commands: \n " \
             "/add I add your location. \n" \
             "/list: I send you all your location.\n" \
             "/reset: I delete all your location\n"
-TOKEN = '1376189072:AAF3GYOqbTdNBFWNpblfSpFcRsZsI4OEzSc'
+
 START, NAME, LOCATION, IS_PHOTO, PHOTO, ADD = range(6)
-bot = telebot.TeleBot(TOKEN)
+bot = telebot.TeleBot(os.getenv("TOKEN"))
 
 USER_STATE = defaultdict(lambda: START)
 USER_PLACE = defaultdict(lambda: {})
